@@ -1,0 +1,1 @@
+Folder for static data folder accessible by public

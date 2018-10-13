@@ -1,0 +1,38 @@
+{% extends "./html/_layouts/_default.html" %}
+
+{% block title %} python-bottle-template {% endblock %}
+
+{% block content %}
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<div class="container">
+
+    {{ macros.page_header('Contact') }}
+
+    <header>
+        <h1>Contact Page</h1>
+    </header>
+    
+    <section>
+        
+        <div class="row">
+            <div class="twelve columns">
+
+                <p>
+                    Describe ways that user can contact you here.
+                </p>
+
+            </div>
+        </div>
+    
+    </section>
+
+    <footer>
+        {{ macros.page_footer() }}
+    </footer>
+
+</div>
+
+{% endblock %}

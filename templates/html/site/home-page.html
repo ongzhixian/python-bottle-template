@@ -1,0 +1,65 @@
+{% extends "./html/_layouts/_default.html" %}
+
+{% block title %} python-bottle-template {% endblock %}
+
+{% block content %}
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<div class="container">
+
+    {{ macros.page_header('Home') }}
+
+    <header>
+        <h1>Home Page</h1>
+    </header>
+    
+    <section>
+        
+        <div class="row">
+            <div class="twelve columns">
+
+                <p>
+                    This is the home page for a generic web application. <br/>
+                    Put stuff that you would like to bring users attention to here.
+                </p>
+
+                <p>
+                    <strong>Note:</strong> 
+                    This template do not have any form of user authentication. <br/>
+                </p>
+
+                <p>
+                    This template also provide the following pages:
+                </p>
+
+                <ol>
+                    <li>About page
+                        <p>
+                            Use this page to describe what is this web application about. 
+                        </p>
+                    </li>
+                    <li>Contact page
+                        <p>
+                            Use this page to describe ways of contacting you.
+                        </p>
+                    </li>
+                </ol>
+
+                <p>
+                    <i>Have fun!</i>
+                </p>
+
+            </div>
+        </div>
+    
+    </section>
+
+    <footer>
+        {{ macros.page_footer() }}
+    </footer>
+
+</div>
+
+{% endblock %}

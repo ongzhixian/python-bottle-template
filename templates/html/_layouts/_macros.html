@@ -1,0 +1,57 @@
+{########################################}
+{# 
+    List of macros defined in this file:
+
+    1.  page_header(active_text, sub_title)
+    2.  page_footer()
+
+#}
+{########################################}
+
+{########################################}
+{# Page header #}
+{########################################}
+
+{% macro page_header(active_text, sub_title) %}
+{% 
+    set menu_items = [
+        { 'href' : "/", 'text' : "Home" },
+        { 'href' : "/about", 'text' : "About" },
+        { 'href' : "/contact", 'text' : "Contact" }
+    ]
+%}
+<div class="row">
+    <div class="twelve columns">
+        <h1 class="page-header">{{APPLICATION_NAME}}
+            {% if sub_title|length > 0 %}
+            <small>{{sub_title}}</small>
+            {% endif %}
+        </h1>
+        <nav class="top-navbar">
+            {% for item in menu_items %}
+            {% if active_text == item.text %}
+            <a href="{{item.href}}" class="active">{{item.text}}</a>
+            {% else %}
+            <a href="{{item.href}}">{{item.text}}</a>
+            {% endif %}
+            {%- endfor %}
+        </nav>
+    </div>
+</div><!--end of .row .twelve.columns -->
+{% endmacro %}
+
+{########################################}
+{# Page footer #}
+{########################################}
+
+{% macro page_footer() %}
+<div class="row">
+        <div class="twelve columns">
+            <hr/>
+            <div>
+                <span>Copyright © {{datetime()|year}} {{SITE_NAME}}</span>
+                <span style="float:right;">version {{VERSION}} (last updated {{VERSION_DATE}})</span>
+            </div>
+        </div>
+    </div><!--end of .row .twelve.columns -->
+{% endmacro %}

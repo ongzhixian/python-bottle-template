@@ -1,0 +1,38 @@
+{% extends "./html/_layouts/_default.html" %}
+
+{% block title %} python-bottle-template {% endblock %}
+
+{% block content %}
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<div class="container">
+
+    {{ macros.page_header('About') }}
+
+    <header>
+        <h1>About Page</h1>
+    </header>
+    
+    <section>
+        
+        <div class="row">
+            <div class="twelve columns">
+
+                <p>
+                    Place a description of your web application here. <br/>
+                </p>
+
+            </div>
+        </div>
+    
+    </section>
+
+    <footer>
+        {{ macros.page_footer() }}
+    </footer>
+
+</div>
+
+{% endblock %}
